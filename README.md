@@ -11,12 +11,12 @@ npm install stylelint-bare-webpack-plugin stylelint --save-dev
 ## Usage
 ```js
 // webpack.config.js
-var StylehintBarePlugin = require('stylelint-bare-webpack-plugin');
+var StylelintBarePlugin = require('stylelint-bare-webpack-plugin');
 
 module.exports = {
     // ...
     plugins: [
-        new StylehintBarePlugin({
+        new StylelintBarePlugin({
             // Optional options object
         })
     ]
@@ -24,7 +24,7 @@ module.exports = {
 ```
 
 ## Options
-You can pass an object containing several options to `StylehintBarePlugin()`, this object can contain the following keys.
+You can pass an object containing several options to `StylelintBarePlugin()`, this object can contain the following keys.
 
 | Option       | Default                          | Description                                                                                             |
 | ------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------- |
