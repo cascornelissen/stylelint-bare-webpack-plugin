@@ -1,0 +1,29 @@
+{
+  "name": "stylelint-bare-webpack-plugin",
+  "version": "0.1.0",
+  "description": "Webpack plugin wrapper for stylelint allowing you to install any version of stylelint you want",
+  "main": "stylelint-bare.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freshheads/stylelint-bare-webpack-plugin.git"
+  },
+  "keywords": [
+    "stylelint"
+  ],
+  "author": {
+    "name": "Cas Cornelissen",
+    "email": "cas.cornelissen@onefinity.io",
+    "url": "https://www.onefinity.io/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/freshheads/stylelint-bare-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/freshheads/stylelint-bare-webpack-plugin#readme",
+  "dependencies": {
+    "lodash": "^4.14.0"
+  }
+}
