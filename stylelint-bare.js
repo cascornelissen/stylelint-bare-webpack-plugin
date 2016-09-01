@@ -1,4 +1,5 @@
 var _ = require('lodash'),
+    chalk = require('chalk'),
     stylelint = require('stylelint');
 
 var linter = function(options) {
@@ -39,6 +40,7 @@ StylehintBarePlugin.prototype.apply = function(compiler) {
 
             done();
         }).catch(function(e) {
+            console.error(chalk.red(['', 'Error in stylelint-bare-webpack-plugin', e].join('\n')))
             done();
         });
 
