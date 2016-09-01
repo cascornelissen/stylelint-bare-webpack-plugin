@@ -1,4 +1,5 @@
 var _ = require('lodash'),
+    path = require('path'),
     chalk = require('chalk'),
     stylelint = require('stylelint');
 
@@ -40,8 +41,9 @@ StylelintBarePlugin.prototype.apply = function(compiler) {
 
             done();
         }).catch(function(e) {
-            console.error(chalk.red(['', 'Error in stylelint-bare-webpack-plugin', e].join('\n')))
-            done();
+            var pkg = require(path.join(__dirname, 'package.json'));
+            console.error(chalk.red(['', 'Error in ' + pkg.name + ' (v' + pkg.version + ')'].join('\n')));
+            console.trace(chalk.red(e));
         });
 
         compilation.plugin && compilation.plugin('compilation', function(compilation) {
