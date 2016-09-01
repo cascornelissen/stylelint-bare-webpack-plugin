@@ -1,6 +1,6 @@
 {
   "name": "stylelint-bare-webpack-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Webpack plugin wrapper for stylelint allowing you to install any version of stylelint you want",
   "main": "stylelint-bare.js",
   "scripts": {
