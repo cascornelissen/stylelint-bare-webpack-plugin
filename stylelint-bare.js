@@ -39,11 +39,13 @@ StylelintBarePlugin.prototype.apply = function(compiler) {
                 console.log(options.formatter(lint.results));
             }
 
-            done();
+            if ( typeof done === 'function' ) done();
         }).catch(function(e) {
             var pkg = require(path.join(__dirname, 'package.json'));
             console.error(chalk.red(['', 'Error in ' + pkg.name + ' (v' + pkg.version + ')'].join('\n')));
             console.trace(chalk.red(e));
+
+            if ( typeof done === 'function' ) done();
         });
 
         compilation.plugin && compilation.plugin('compilation', function(compilation) {
