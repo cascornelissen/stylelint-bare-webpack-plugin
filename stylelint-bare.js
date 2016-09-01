@@ -12,7 +12,7 @@ var linter = function(options) {
     });
 }
 
-function StylehintBarePlugin(options) {
+function StylelintBarePlugin(options) {
     // Merge specified options with default options
     this.options = _.merge({}, {
         files: '**/*.s?(c|a)ss',
@@ -23,7 +23,7 @@ function StylehintBarePlugin(options) {
     if ( !Array.isArray(this.options.files) ) this.options.files = [this.options.files];
 }
 
-StylehintBarePlugin.prototype.apply = function(compiler) {
+StylelintBarePlugin.prototype.apply = function(compiler) {
     var options = this.options;
 
     var compile = function(compilation, done) {
@@ -54,4 +54,4 @@ StylehintBarePlugin.prototype.apply = function(compiler) {
     compiler.plugin('done', compile);
 };
 
-module.exports = StylehintBarePlugin;
+module.exports = StylelintBarePlugin;
