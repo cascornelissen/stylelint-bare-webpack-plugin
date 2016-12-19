@@ -1,7 +1,8 @@
 var _ = require('lodash'),
     path = require('path'),
     chalk = require('chalk'),
-    stylelint = require('stylelint');
+    stylelint = require('stylelint'),
+    moduleAvailable = require('module-available');
 
 var linter = function(options) {
     return new Promise(function(resolve, reject) {
@@ -11,14 +12,23 @@ var linter = function(options) {
             reject(e);
         });
     });
-}
+};
 
 function StylelintBarePlugin(options) {
     // Merge specified options with default options
     this.options = _.merge({}, {
         files: '**/*.s?(c|a)ss',
         configFile: '.stylelintrc',
-        formatter: require('stylelint/dist/formatters/stringFormatter').default
+        formatter: function() {
+            if ( _.has(stylelint, 'formatters.string') ) {
+                return stylelint.formatters.string;
+            } else if ( moduleAvailable('stylelint/dist/formatters/stringFormatter') ) {
+                return require('stylelint/dist/formatters/stringFormatter').default;
+            } else {
+                console.error('No default stylelint formatter could be found');
+                return false;
+            }
+        }()
     }, options);
 
     if ( !Array.isArray(this.options.files) ) this.options.files = [this.options.files];
