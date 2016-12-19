@@ -12,7 +12,7 @@ var linter = function(options) {
             reject(e);
         });
     });
-}
+};
 
 function StylelintBarePlugin(options) {
     // Merge specified options with default options
@@ -20,10 +20,10 @@ function StylelintBarePlugin(options) {
         files: '**/*.s?(c|a)ss',
         configFile: '.stylelintrc',
         formatter: function() {
-            if ( moduleAvailable('stylelint/dist/formatters/stringFormatter') ) { // < 7.7.0
+            if ( _.has(stylelint, 'formatters.string') ) {
+                return stylelint.formatters.string;
+            } else if ( moduleAvailable('stylelint/dist/formatters/stringFormatter') ) {
                 return require('stylelint/dist/formatters/stringFormatter').default;
-            } else if ( moduleAvailable('stylelint/lib/formatters/stringFormatter') ) { // >= 7.7.0
-                return require('stylelint/lib/formatters/stringFormatter');
             } else {
                 console.error('No default stylelint formatter could be found');
                 return false;
