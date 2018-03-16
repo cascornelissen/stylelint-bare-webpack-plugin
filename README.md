@@ -28,7 +28,7 @@ You can pass an object containing several options to `StylelintBarePlugin()`, th
 
 | Option       | Default                          | Description                                                                                             |
 | ------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `files`      | `'**/*.s?(c|a)ss'`               | [`glob`](http://npmjs.com/package/glob) used for finding the files that will be linted                  |
+| `files`      | `'**/*.s?(c\|a)ss'`               | [`glob`](http://npmjs.com/package/glob) used for finding the files that will be linted                  |
 | `configFile` | `'.stylelintrc'`                 | Location of the [Stylelint configuration](http://stylelint.io/user-guide/configuration/) file           |
 | `formatter`  | `stringFormatter from Stylelint` | [Formatter](http://stylelint.io/developer-guide/formatters/) used to display warnings/errors in console |
 
