@@ -6,7 +6,7 @@
 This [webpack](https://webpack.github.io/) plugin allows you to lint your CSS/SASS/SCSS/LESS etc. files through any version of [Stylelint](http://stylelint.io/). It is heavily inspired by [`stylelint-webpack-plugin`](https://www.npmjs.com/package/stylelint-webpack-plugin) with the key difference being that `stylelint` isn't included in this package, allowing you to use any version you want instead of waiting on the webpack plugin to be updated to the newest version.
 
 **Compatibility**  
-Version `^1.0.0` (`stylelint-bare-webpack-plugin@next`) of this plugin is compatible with webpack `^4.0.0`. If you're using an older version of webpack, make sure to install the latest `^0.1.0` (`stylelint-bare-webpack-plugin@latest`) release of this plugin.
+Version `^1.0.0` of this plugin is compatible with webpack `^4.0.0`. If you're using an older version of webpack, make sure to install the `^0.1.0` (`npm install stylelint-bare-webpack-plugin@^0.1.0`) release of this plugin.
 
 ## Installation
 ```shell
