@@ -9,5 +9,5 @@ $ ../../node_modules/.bin/webpack
 Since the `stylelint` package itself is not included in this package you'll have to install it manually to run any of the examples.
 
 ```shell
-$ npm i stylelint --no-save
+$ npm install stylelint --no-save
 ```
