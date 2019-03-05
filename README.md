@@ -31,11 +31,13 @@ module.exports = {
 ## Options
 You can pass an object containing several options to `StylelintBarePlugin()`, this object can contain the following keys.
 
-| Option       | Default                          | Description                                                                                             |
-| ------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `files`      | `'**/*.s?(c\|a)ss'`               | [`glob`](http://npmjs.com/package/glob) used for finding the files that will be linted                  |
-| `configFile` | `'.stylelintrc'`                 | Location of the [Stylelint configuration](http://stylelint.io/user-guide/configuration/) file           |
-| `formatter`  | `stringFormatter` from Stylelint | [Formatter](http://stylelint.io/developer-guide/formatters/) used to display warnings/errors in console |
+| Option        | Default                          | Description                                                                                                                                                          |
+| ------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `files`       | `'**/*.s?(c\|a)ss'`              | [`glob`](http://npmjs.com/package/glob) used for finding the files that will be linted                                                                               |
+| `configFile`  |                                  | Location of the [Stylelint configuration](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md#loading-the-configuration-object) file |
+| `emitErrors`  | `true`                           | TODO
+| `failOnError` | `false`                          | TODO
+| `formatter`   | `stringFormatter` from Stylelint | [Formatter](http://stylelint.io/developer-guide/formatters/) used to display warnings/errors in console                                                              |
 
 ## License
 This project is [licensed](LICENSE.md) under the [MIT](https://opensource.org/licenses/MIT) license.
