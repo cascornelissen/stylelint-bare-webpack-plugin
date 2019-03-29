@@ -29,12 +29,11 @@ module.exports = {
 ```
 
 ## Options
-You can pass an object containing several options to `StylelintBarePlugin()`, this object can contain the following keys.
+You can pass an object containing several options to `StylelintBarePlugin()`, this object can contain the following keys and any key that can be [passed to stylelint](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/node-api.md#options) as well.
 
 | Option        | Default                          | Description                                                                                                                                                          
 | ------------- | -------------------------------- | ------------
 | `files`       | `'**/*.s?(c\|a)ss'`              | [`glob`](http://npmjs.com/package/glob) used for finding the files that will be linted                                                                               
-| `configFile`  |                                  | Location of the [Stylelint configuration](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md#loading-the-configuration-object) file, not specifying this will allow stylelint to find the file by itself
 | `emitErrors`  | `true`                           | Whether to emit webpack errors or only warnings, note that all stylelint errors will still be shown when disabling this
 | `failOnError` | `false`                          | Whether to stop the entire Webpack process when a stylelint error is found
 | `formatter`   | `stringFormatter` from Stylelint | [Formatter](http://stylelint.io/developer-guide/formatters/) used to display warnings/errors in console                                                              
