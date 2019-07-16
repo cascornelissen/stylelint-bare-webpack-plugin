@@ -28,16 +28,16 @@
     "dependencies": {
         "chalk": "^2.4.2",
         "get-value": "^3.0.1",
-        "is-plain-object": "^2.0.4",
-        "lodash": "^4.17.11",
+        "is-plain-object": "^3.0.0",
+        "lodash": "^4.17.14",
         "module-available": "^1.0.6",
         "webpack-merge": "^4.2.1"
     },
     "devDependencies": {
-        "@babel/preset-env": "^7.4.3",
-        "stylelint-config-recommended": "^2.1.0",
-        "webpack": "^4.29.6",
-        "webpack-cli": "^3.3.0"
+        "@babel/preset-env": "^7.5.4",
+        "stylelint-config-recommended": "^2.2.0",
+        "webpack": "^4.35.3",
+        "webpack-cli": "^3.3.6"
     },
     "peerDependencies": {
         "stylelint": "*",
