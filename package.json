@@ -23,10 +23,10 @@
         "lib/"
     ],
     "engines": {
-        "node": ">= 6.9.0 || >= 8.9.0"
+        "node": ">= 8.9.0"
     },
     "dependencies": {
-        "chalk": "^2.4.2",
+        "chalk": "^3.0.0",
         "get-value": "^3.0.1",
         "is-plain-object": "^3.0.0",
         "lodash": "^4.17.15",
