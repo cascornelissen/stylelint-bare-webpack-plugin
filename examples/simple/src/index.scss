@@ -1,3 +1,5 @@
 .example {
-    color: red;; // Triggers `no-extra-semicolons`
+    // Error on rule: no-extra-semicolons
+    // Warning on rule: color-hex-case
+    color: #F00;;
 }

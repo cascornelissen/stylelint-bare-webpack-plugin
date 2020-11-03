@@ -1,3 +1,8 @@
 {
-    "extends": "stylelint-config-recommended"
+    "extends": "stylelint-config-recommended",
+    "rules": {
+        "color-hex-case": ["lower", {
+            "severity": "warning"
+        }]
+    }
 }
